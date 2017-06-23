@@ -1,0 +1,16 @@
+<view class="section" id="cui-car">
+	<view wx:if="{{hasCar}}">
+		<view wx:for="{{carList}}" wx:item="{{item}}" class="car-item">
+			{{item.platNo}}
+			<view class="car-btn" bindtap="addCar" data-index="{{ index }}" data-plat = "{{item.platNo}}" data-type = "change">修改</view>
+			<view class="car-btn" bindtap="deleteCar" data-index="{{ index }}" data-plat = "{{item.platNo}}">解除绑定</view>
+		</view>
+	</view>
+	<view wx:else class="no-car">
+		<image src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/carbg.png" class="no-car-image" />
+		<view class="no-car-title">添加您的车辆，在支持自动付费的停车场停车，出场时无需手动付费，可直接离场，系统帮您自动扣费</view>
+	</view>
+	<view class="btn-area">
+		<button bindtap="addCar" class="btn btn-allow margin-top-60" data-type = "add">添加车辆</button>
+	</view>
+</view>

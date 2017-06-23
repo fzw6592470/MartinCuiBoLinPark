@@ -1,0 +1,14 @@
+<view class="section" id="cui-change-password">
+	<form class="change-password" bindsubmit="changePayPassword"> 
+		<input class="general-input password-input" type="password" name="oldPassword" bindchange="inputOldPassword" value="{{oldPassword}}" placeholder="请输入原密码" maxlength="6" />
+		<input class="general-input password-input" type="password" name="newPassword" bindchange="inputNewPassword" value="{{newPassword}}" placeholder="请输入新的支付密码" maxlength="6" />
+		<input class="general-input password-input" type="password" name="reNewPassword" bindchange="inputReNewPassword" value="{{reNewPassword}}" placeholder="请重复输入新的支付密码" maxlength="6" />
+		
+		<view  class="password-description"> 
+			密码需由6位数字组成
+		</view>
+		<view  class="btn-area"> 
+			<button class="btn btn-allow margin-top-60" formType="submit" >确定</button>
+		</view>
+	</form>
+</view>

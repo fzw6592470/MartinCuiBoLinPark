@@ -1,0 +1,58 @@
+{
+  "pages":[
+  	"pages/parking/index",
+		"pages/wallet/index",
+		"pages/account/index",
+		"pages/parking/inroad",
+		"pages/parking/outroad",
+  	"pages/parking/order",
+		"pages/car/index",
+		"pages/car/platInput",
+		"pages/account/bill",
+		"pages/account/record",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/member/login",
+    "pages/member/register",
+    "pages/member/setPayPwd",
+    "pages/member/vlogin",
+    "pages/password/index",
+    "pages/password/changePwd",
+    "pages/password/changePayPwd",
+    "pages/password/mobileVaild",
+    "pages/password/resetPwd",
+    "pages/password/resetPayPwd"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "泊林停车",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar" :{
+		"list":[
+			{
+				"pagePath": "pages/parking/index",
+				"text" : "停车缴费",
+				"iconPath": "resource/images/car.png",
+				"selectedIconPath": "resource/images/car_hover.png"
+			},
+			{
+				"pagePath": "pages/wallet/index",
+				"text" : "钱包充值",
+				"iconPath": "resource/images/wallet.png",
+				"selectedIconPath": "resource/images/wallet_hover.png"
+			},
+			{
+				"pagePath": "pages/account/index",
+				"text" : "个人中心",
+				"iconPath": "resource/images/user.png",
+				"selectedIconPath": "resource/images/user_hover.png"
+			}
+		],
+		"selectedColor" : "#56bd64",
+		"backgroundColor": "#fff",
+		"borderStyle": "white"
+	},
+	"debug": true
+}

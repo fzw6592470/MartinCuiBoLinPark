@@ -1,0 +1,44 @@
+<view class="section" id="cui-record">
+	<view wx:if="{{hasRecord}}" class="record-show">
+		<view class="record_tab">
+			<view class="record_tab_item {{ recordTabBar?'':'active' }}"><view class="record-text-decoration" bindtap="showOtherRecord">未支付</view></view>
+			<view class="record_tab_item {{ recordTabBar?'active':'' }}"><view class="record-text-decoration" bindtap="showOtherRecord">已支付</view></view>
+		</view>
+		<scroll-view hidden="{{recordTabBar?false:true}}" scroll-y="true" bindscrolltolower="queryRecordMore" class="record-list">
+			<view wx:for="{{record_list}}" wx:for-index="idx">
+				<view class="record-day">{{item.data}}</view>
+				<view class="record-item" wx:for="{{ item.dayDetail }}">
+					<view class="record-icon">
+						<image wx:if="{{item.parkingType==0}}" src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/record_road.png" class="record-icon-icon" />
+						<image wx:else src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/record_parking.png" class="record-icon-icon" />
+					</view>
+					<view class="record-text">
+						<view class="record-title">{{item.fee}}元  <view class="record-times">{{item.entryTime}}-{{item.leaveTime}}</view></view>
+						<view class="record-parking-name">{{item.parkingName}}</view>
+						<button class="record-btn" type="primary" wx:if="{{item.payResult==0}}" data-item="{{idx}},{{index}}" bindtap="goPay">去缴费</button>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+		<scroll-view hidden="{{recordTabBar?true:false}}" scroll-y="true" bindscrolltolower="queryRecordMore" class="record-list">
+			<view wx:for="{{record_list}}">
+				<view class="record-day">{{item.data}}</view>
+				<view class="record-item" wx:for="{{ item.dayDetail }}">
+					<view class="record-icon">
+						<image wx:if="{{item.parkingType==0}}" src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/record_road.png" class="record-icon-icon" />
+						<image wx:else src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/record_parking.png" class="record-icon-icon" />
+					</view>
+					<view class="record-text">
+						<view class="record-title">{{item.fee}}元  <view class="record-times">{{item.entryTime}}-{{item.leaveTime}}</view></view>
+						<view class="record-parking-name">{{item.parkingName}}</view>
+						<button class="record-btn" type="primary" wx:if="{{item.payResult==0}}">去缴费</button>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view wx:else class="no-record">
+		<image class="no-record-img" src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/record_list.png" alt="无停车记录" />
+		<view class="no-record-title">还没有停车记录</view>
+	</view>
+</view>

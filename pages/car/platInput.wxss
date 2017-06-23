@@ -1,0 +1,132 @@
+.h2{
+	width:100%;
+	height:80rpx;
+	box-sizing: border-box;
+	line-height: 80rpx;
+	padding-left:54rpx;	
+	font-size: 24rpx;
+	color:#666;
+	position: relative;
+	font-weight: bold;
+}
+.h2:before{
+	content:'';
+	position: absolute;
+	top: 34rpx;
+	left: 32rpx;
+	z-index: 101;
+	background-color: #56bd64;
+	border-radius: 50%;
+	width:12rpx;
+	height:12rpx;
+}
+
+.code-list{
+	background:#fff;
+	padding:28rpx 32rpx;
+}
+.code-list .code-item{
+	float:left;
+	width:12.5%;
+	height:80rpx;
+	line-height:80rpx;
+	text-align:center;
+	border:2rpx solid #e2e2e2;
+	border-right:0 none;
+	background:#fff;
+	font-size:24rpx;
+	box-sizing: border-box;
+}
+.code-list .code-item:first-child{
+	border-top-left-radius:6rpx;
+	border-bottom-left-radius:6rpx;
+}
+.code-list .code-item:last-child{
+	border-top-right-radius:6rpx;
+	border-bottom-right-radius:6rpx;
+	border-right:2rpx solid #e2e2e2;
+}
+.code-list .code-item.c-active{
+	border:2rpx solid #56bd64;
+}
+.keyboard-list{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	background:#d1d5da;
+	padding-bottom:40rpx;
+	z-index:999;
+}
+.keyboard-list .list-item{
+	margin-top:20rpx;
+}
+.p-item-wrapper{
+	display:block;
+	float:left;
+	width:8%;
+	height:88rpx;
+	line-height:88rpx;
+	background:#fff;
+	border-radius:10rpx;
+	text-align:center;
+	font-size:28rpx;
+	margin-right:2%;
+	position:relative;
+}
+.list-item .p-item{
+	display:block;
+}
+.p-item-wrapper .magnifier{
+	display:inline-block;
+	position:absolute;
+	width:120%;
+	height:66rpx;
+	line-height:66rpx;
+	top:-72rpx;
+	border-radius:10rpx;
+	left:-10%;
+	background:#41aaf2;
+	color:#333;
+	text-align:center;
+	border:2rpx solid #e2e2e2;
+}
+.list-item .p-item-wrapper:first-child{
+	margin-left:1%;
+}
+.list-item .p-item-wrapper:last-child{
+	margin-right:1%;
+}
+.list-four .p-item-wrapper:first-child{
+	margin-left:1%;
+}
+#simKeyBoard .list-three .p-item-wrapper:first-child{
+	margin-left:5.5%;
+}
+#simKeyBoard .list-four .p-item-wrapper:first-child{
+	margin-left:15.5%;
+}
+#simKeyBoard .list-four .delete{
+	font-family:iconfont;
+	width:12%;
+	float:right;
+	height:88rpx;
+	line-height:88rpx;
+	background:#acb4bf;
+	text-align:center;
+	color:#fff;
+	border-radius:6rpx;
+	margin-right:1%;
+	font-size:56rpx;
+}
+.parking-description{
+	width: 100%;
+	height: auto;
+	line-height: 48rpx;
+	color: #888;
+	font-size: 24rpx;
+	padding: 32rpx;
+	box-sizing: border-box;	
+}
+.parking-description-line{
+	display:block;
+}

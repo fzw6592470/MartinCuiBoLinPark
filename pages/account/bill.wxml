@@ -1,0 +1,20 @@
+<view class="section" id="cui-bill">
+	<scroll-view wx:if="{{hasBill}}" scroll-y="true" bindscrolltolower="queryBillMore" class="bill-list">
+		<view wx:for="{{bill_list}}">
+			<view class="bill-day">{{item.data}}</view>
+			<view wx:for="{{ item.dayDetail }}" class="bill-item">
+				<view wx:if="{{ item.orderType == 0 }}" class="bill-title">充值</view>
+				<view wx:elif="{{ item.orderType == 1 }}" class="bill-title">支付停车费</view>
+				<view wx:else class="bill-title">违章</view>
+				
+				<view class="bill-fee color_red" wx:if="{{ item.orderType == 0 }}">+{{ item.amount }} 元</view>
+				<view class="bill-fee" wx:else>-{{  item.amount  }} 元</view>
+				<view class="bill-time">{{ item.transTime }}</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view wx:else class="no-bill">
+		<image class="no-bill-img" src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/bill_list.png" alt="无明细记录" />
+		<view class="no-bill-title">还没有明细记录</view>
+	</view>
+</view>

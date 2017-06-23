@@ -1,0 +1,18 @@
+<view class="section" id="cui-account">
+	<view class="header">
+		<view class="head-img"><image src="{{ headImg==''?'http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/touxiang.png':headImg }}" class="head-imgs" /></view>
+		<view class="head-title head-mob">{{mobileNo}}</view>
+		<view class="head-title head-bal">余额：{{balance}} 元</view>
+	</view>
+	
+	<view class="account-menu">
+		<view class="account-menu-item" data-url = "{{car_url}}" bindtap="turnUrl"><view class="account-menu-item-icon icon-car"> </view><view class="account-menu-item-text">我的车辆</view></view>
+		<view class="account-menu-item" data-url = "{{bill_url}}" bindtap="turnUrl"><view class="account-menu-item-icon icon-bill"> </view><view class="account-menu-item-text">我的账单</view></view>
+		<view class="account-menu-item" data-url = "{{record_url}}" bindtap="turnUrl"><view class="account-menu-item-icon icon-record"> </view><view class="account-menu-item-text">停车记录</view></view>
+		<view class="account-menu-item" data-url = "{{pwd_url}}" bindtap="turnUrl"><view class="account-menu-item-icon icon-psw"> </view><view class="account-menu-item-text">密码管理</view></view>
+	</view>
+	
+	<view class="btn-area">
+		<button bindtap="loginout" class="btn btn-allow margin-top-60">退出</button>
+	</view>
+</view>

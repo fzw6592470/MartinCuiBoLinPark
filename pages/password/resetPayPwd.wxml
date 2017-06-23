@@ -1,0 +1,43 @@
+<view class="section" id="cui-wallet-charge">
+	<view class="general-h2 text-center">请输入支付密码</view>
+		
+	<view class="code-list clearfix" data-num = "{{ codeItemNum }}">
+		<view class="code-item c-num-item {{showActive==1?'c-active':''}}" data-num="0" bindtap="clickCodeItem">{{payPassword==[] ? "" : payPassword[0]==""||payPassword[0]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showActive==2?'c-active':''}}" data-num="1" bindtap="clickCodeItem">{{payPassword==[] ? "" : payPassword[1]==""||payPassword[1]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showActive==3?'c-active':''}}" data-num="2" bindtap="clickCodeItem">{{payPassword==[] ? "" : payPassword[2]==""||payPassword[2]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showActive==4?'c-active':''}}" data-num="3" bindtap="clickCodeItem">{{payPassword==[] ? "" : payPassword[3]==""||payPassword[3]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showActive==5?'c-active':''}}" data-num="4" bindtap="clickCodeItem">{{payPassword==[] ? "" : payPassword[4]==""||payPassword[4]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showActive==6?'c-active':''}}" data-num="5" bindtap="clickCodeItem">{{payPassword==[] ? "" : payPassword[5]==""||payPassword[5]==undefined?"":"*"}}</view>
+	</view>
+	
+	<view class="general-h2 text-center">请再次输入以确认</view>
+	
+	<view class="code-list clearfix" data-num = "{{ codeItemNum }}">
+		<view class="code-item c-num-item {{showReActive==1?'c-active':''}}" data-num="0" bindtap="clickReCodeItem">{{repayPassword==[] ? "" : repayPassword[0]==""||repayPassword[0]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showReActive==2?'c-active':''}}" data-num="1" bindtap="clickReCodeItem">{{repayPassword==[] ? "" : repayPassword[1]==""||repayPassword[1]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showReActive==3?'c-active':''}}" data-num="2" bindtap="clickReCodeItem">{{repayPassword==[] ? "" : repayPassword[2]==""||repayPassword[2]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showReActive==4?'c-active':''}}" data-num="3" bindtap="clickReCodeItem">{{repayPassword==[] ? "" : repayPassword[3]==""||repayPassword[3]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showReActive==5?'c-active':''}}" data-num="4" bindtap="clickReCodeItem">{{repayPassword==[] ? "" : repayPassword[4]==""||repayPassword[4]==undefined?"":"*"}}</view>
+		<view class="code-item c-num-item {{showReActive==6?'c-active':''}}" data-num="5" bindtap="clickReCodeItem">{{repayPassword==[] ? "" : repayPassword[5]==""||repayPassword[5]==undefined?"":"*"}}</view>
+	</view>
+	
+	<view  class="btn-area"> 
+		<button class="btn btn-allow margin-top-60" bindtap="setPayPassword" >确定</button>
+	</view>
+	
+	<view wx:if="{{keyboardShow}}" class="keyboard-list" id="simKeyBoard">
+		<view class="list-item clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.number}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+		</view>
+		<view class="list-item list-two clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.letterone}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+		</view>
+		<view class="list-item list-three clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.lettertwo}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+		</view>
+		<view class="list-item list-four clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.letterthree}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+			<view class="delete" bindtap="deleteItemCode" hover hover-class="{{hoverClass}}">&#xe606;</view>
+		</view>
+	</view>
+</view>

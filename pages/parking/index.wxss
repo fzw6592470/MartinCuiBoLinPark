@@ -1,0 +1,20 @@
+.cui-parking-icon{
+	width: 100%;
+	height: 312rpx;
+	display: block;
+	margin-top: 36rpx;
+}
+.cui-parking-icon image{
+	width: 235rpx;
+	height: 105rpx;
+	margin-left: 50rpx;
+	margin-top: 101rpx;
+}
+.cui-parking-inside{
+	background-image: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/inload.png);
+	background-size: 100%;
+}
+.cui-parking-outside{
+	background-image: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/parking.png);
+	background-size: 100%;
+}

@@ -1,0 +1,9 @@
+<view class="section" id="cui-password-manage">
+	
+	<view class="password-choice"> 
+		<view class="password-choice-btn" bindtap="goChange" data-url = "changePwd">修改登录密码</view>
+		<view class="password-choice-btn" bindtap="goChange" data-url = "changePayPwd">修改支付密码</view>
+		<view class="password-choice-btn" bindtap="goChange" data-url = "mobileVaild?type=login">重置登录密码</view>
+		<view class="password-choice-btn" bindtap="goChange" data-url = "mobileVaild?type=pay">重置支付密码</view>
+	</view>
+</view>

@@ -1,0 +1,37 @@
+<view class="section" id="cui-inroad">
+	<view class="h2">请输入地面上标记的6位泊位编号</view>
+	<view class="code-list clearfix" data-num = "{{ codeItemNum }}">
+		<view class="code-item c-num-item {{showActive==1?'c-active':''}}" data-num="0" bindtap="clickCodeItem">{{spotCode==[] ? "" : spotCode[0]}}</view>
+		<view class="code-item c-num-item {{showActive==2?'c-active':''}}" data-num="1" bindtap="clickCodeItem">{{spotCode==[] ? "" : spotCode[1]}}</view>
+		<view class="code-item c-num-item {{showActive==3?'c-active':''}}" data-num="2" bindtap="clickCodeItem">{{spotCode==[] ? "" : spotCode[2]}}</view>
+		<view class="code-item c-num-item {{showActive==4?'c-active':''}}" data-num="3" bindtap="clickCodeItem">{{spotCode==[] ? "" : spotCode[3]}}</view>
+		<view class="code-item c-num-item {{showActive==5?'c-active':''}}" data-num="4" bindtap="clickCodeItem">{{spotCode==[] ? "" : spotCode[4]}}</view>
+		<view class="code-item c-num-item {{showActive==6?'c-active':''}}" data-num="5" bindtap="clickCodeItem">{{spotCode==[] ? "" : spotCode[5]}}</view>
+	</view>
+	<view class="h2">购买停车时长</view>
+	<picker-view class="inroad-picker" value="{{ time }}" bindchange="selectParkingTime" indicator-style="height:96rpx;background-color:transparent; border-top:2rpx solid #e2e2e2;border-bottom:2rpx solid #e2e2e2;color:#333;">
+		<picker-view-column><view wx:for="{{ hours }}"  class="inroad-picker-item" style="height:96rpx;">{{item}}  小时</view></picker-view-column>
+		<picker-view-column><view wx:for="{{ minutes }}"  class="inroad-picker-item" style="height:96rpx;">{{item}}  分钟</view></picker-view-column>
+	</picker-view>
+	
+	<view class="inroad-fee">应付停车费：<view class="inroad-feenum">{{fee}}</view> 元</view>
+	<view class="btn-area">
+		<button class="btn btn-allow margin-top-60" bindtap="makeOrder">确认</button>
+	</view>
+	
+	<view wx:if="{{keyboardShow}}" class="keyboard-list" id="simKeyBoard">
+		<view class="list-item clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.number}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+		</view>
+		<view class="list-item list-two clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.letterone}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+		</view>
+		<view class="list-item list-three clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.lettertwo}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+		</view>
+		<view class="list-item list-four clearfix">
+			<view class="p-item-wrapper" wx:for="{{list.letterthree}}"><view class="p-item" bindtap="chooseItemCode" data-value="{{item}}">{{item}}</view></view>
+			<view class="delete" bindtap="deleteItemCode" hover hover-class="{{hoverClass}}">&#xe606;</view>
+		</view>
+	</view>
+</view>

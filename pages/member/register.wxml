@@ -1,0 +1,13 @@
+<view class="section" id="cui-login">
+	<form class="register-form" bindsubmit="register">
+		<input name="userName" class="general-input login-input" id="cui-wallet-charge-fee" bindchange="inputUserName" value="{{userName}}" type="tel" maxlength="11" placeholder="请输入手机号" placeholder-style="color:#ddd" />
+		<input name="password" class="general-input login-input" id="cui-wallet-charge-fee" bindchange="inputPassword" value="{{password}}" type="password" maxlength="32" placeholder="请输入8位以上数字和字母组合的登录密码" placeholder-style="color:#ddd" />
+		<input class="general-input login-input" id="cui-wallet-charge-fee" bindchange="inputRePassword" value="{{repassword}}" type="password" maxlength="32" placeholder="请确认登录密码" placeholder-style="color:#ddd" />
+		<input name="varifyCode" class="general-input login-input" id="cui-wallet-charge-fee" bindchange="inputVarifyCode" value="{{varifyCode}}" type="tel" maxlength="6" placeholder="请输入验证码" placeholder-style="color:#ddd" />
+		<button class="btn {{allow?'btn-noallow':'btn-allow'}} margin-top-60" disabled="{{allow}}" formType="submit">登录</button>
+		<view bindtap="sendVarifyCode" class="btn {{hasSend?'btn-noallow':'btn-allow'}} cui-varify-code"> {{varifyCodeTime}} </view>
+		
+	</form>
+	
+	<view class="register-btn" bindtap="goBack" ><view class="register-icon"></view>返回登录</view>
+</view>

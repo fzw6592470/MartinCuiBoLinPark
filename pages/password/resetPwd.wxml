@@ -1,0 +1,13 @@
+<view class="section" id="cui-reset-password">
+	<form class="change-password" bindsubmit="changePassword"> 
+		<input class="general-input password-input" type="password" name="newPassword" bindchange="inputNewPassword" value="{{newPassword}}" placeholder="请输入新的登录密码" />
+		<input class="general-input password-input" type="password" name="reNewPassword" bindchange="inputReNewPassword" value="{{reNewPassword}}" placeholder="请重复输入新的登录密码" />
+		
+		<view  class="password-description"> 
+			密码需由8位或以上字母和数字组成
+		</view>
+		<view  class="btn-area"> 
+			<button class="btn btn-allow margin-top-60" formType="submit" >确定</button>
+		</view>
+	</form>
+</view>

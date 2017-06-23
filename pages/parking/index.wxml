@@ -1,0 +1,8 @@
+<view class="section" id="cui-parking">
+	<a href="javascript:void(0);" bindtap="outSideParking" data-url="inroad" class="cui-parking-icon cui-parking-inside">
+		<image src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/roadside.png" />
+	</a>
+	<a href="javascript:void(0);"  bindtap="inSideParking" data-url="../car/platInput" class="cui-parking-icon cui-parking-outside">
+		<image src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/parkinglots.png" />
+	</a>
+</view>

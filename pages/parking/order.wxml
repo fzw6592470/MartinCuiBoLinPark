@@ -1,0 +1,39 @@
+<view class="section" id="cui-order">
+	<view class="parking-order">
+		<view class="parking-title">停车费</view>
+		<view class="parking-fee">￥{{ fee }}</view>
+		<view class="parking-line"></view>
+		<view class="parking-time">时长：{{times}} ({{entryTime}} - {{leaveTime}})</view>
+		<view class="parking-name">{{ parkingName }}</view>
+	</view>
+	<view class="h2">
+		请选择支付方式
+	</view>
+	
+	<view class="pay-type">
+		<view class="pay-item" bindtap="chooseType" data-type = "0">
+			<view class="pay-icon wechat-icon"></view>
+			<view class="pay-text">
+				<view class="pay-title">微信支付</view>
+				<view class="pay-default">
+					<image src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/choose.png" class="pay-active"  hidden="{{ type==0?false:true }}" />
+				</view>
+			</view>
+		</view>
+		<view class="pay-item"  bindtap="chooseType" data-type = "1">
+			<view class="pay-icon balance-icon"></view>
+			<view class="pay-text">
+				<view class="{{canPay?'pay-title':'no-pay'}}">余额	￥{{ balance }}</view>
+				<view class="{{canPay?'pay-descript':'no-pay-descript'}}">余额不足请使用其他方式支付</view>
+				<view class="pay-default">
+					<image src="http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/choose.png" class="pay-active" hidden="{{ type==1?false:true }}" />
+				</view>
+			</view>
+		</view>
+	</view>
+	
+	<view class="btn-area">
+		<view class="btn btn-allow margin-top-60" bindtap="goPay">立即支付</view>
+	</view>
+	
+</view>

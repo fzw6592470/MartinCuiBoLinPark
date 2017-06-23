@@ -1,0 +1,13 @@
+<view class="section" id="cui-login">
+	
+	
+	<form class="login-form" bindsubmit="login">
+		<input name="userName" class="general-input login-input" id="cui-wallet-charge-fee" bindchange="inputUserName" value="{{userName}}" type="tel" maxlength="11" placeholder="请输入用户名/手机号" placeholder-style="color:#ddd" />
+		<input name="password" class="general-input login-input" id="cui-wallet-charge-fee" bindchange="inputPassword" value="{{password}}" type="password" maxlength="32" placeholder="请输入密码" placeholder-style="color:#ddd" />
+		<button class="btn {{allow?'btn-noallow':'btn-allow'}} margin-top-60" disabled="{{allow}}" formType="submit">登录</button>
+		
+		<view bindtap="goVaildLogin" class="forget-pwd">忘记密码</view>
+	</form>
+	
+	<view class="register-btn" bindtap="goRegister" >没有帐号？急速注册 <view class="register-icon"></view></view>
+</view>

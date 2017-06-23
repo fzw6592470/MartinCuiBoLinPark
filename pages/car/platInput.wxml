@@ -1,0 +1,85 @@
+<view class="section" id="cui-plat" wx:if="{{type=='car'}}">
+	<view class="h2">请输入车牌号码</view>
+	<view class="code-list clearfix">
+		<view id="codePrefix" class="code-item {{showActive==1?'c-active':''}}" bindtap="choiceArea">{{ defaultPlatNo[0] }}</view>
+		<view id="letterPrefix" class="code-item c-num-item {{showActive==2?'c-active':''}}" bindtap="clickCodeItem" data-num="1">{{ defaultPlatNo[1] }}</view>
+		<view class="code-item c-num-item {{showActive==3?'c-active':''}}" data-num="2" bindtap="clickCodeItem">{{ defaultPlatNo[2] }}</view>
+		<view class="code-item c-num-item {{showActive==4?'c-active':''}}" data-num="3" bindtap="clickCodeItem">{{ defaultPlatNo[3] }}</view>
+		<view class="code-item c-num-item {{showActive==5?'c-active':''}}" data-num="4" bindtap="clickCodeItem">{{ defaultPlatNo[4] }}</view>
+		<view class="code-item c-num-item {{showActive==6?'c-active':''}}" data-num="5" bindtap="clickCodeItem">{{ defaultPlatNo[5] }}</view>
+		<view class="code-item c-num-item {{showActive==7?'c-active':''}}" data-num="6" bindtap="clickCodeItem">{{ defaultPlatNo[6] }}</view>
+		<view class="code-item c-num-item {{showActive==8?'c-active':''}}" data-num="7" bindtap="clickCodeItem">{{ defaultPlatNo[7] }}</view>
+	</view>
+	<view class="btn-area">
+		<button class="btn {{ allow?'btn-allow':'btn-noallow'}} margin-top-60" bindtap="addCar">确认</button>
+	</view>
+	<view class="parking-description">
+		<text class="parking-description-line">请绑定真实有效的车牌号，否则无法正常使用车牌付费等功能</text>
+	</view>
+</view>
+<view class="section" id="cui-plat" wx:elif="{{type=='parking'}}">
+	<view class="h2">请输入车牌号码进行缴费</view>
+	<view class="code-list clearfix">
+		<view id="codePrefix" class="code-item {{showActive==1?'c-active':''}}"  bindtap="choiceArea">{{ defaultPlatNo[0] }}</view>
+		<view id="letterPrefix" class="code-item c-num-item {{showActive==2?'c-active':''}}" data-num="1" bindtap="clickCodeItem">{{ defaultPlatNo[1] }}</view>
+		<view class="code-item c-num-item {{showActive==3?'c-active':''}}" data-num="2" bindtap="clickCodeItem">{{ defaultPlatNo[2] }}</view>
+		<view class="code-item c-num-item {{showActive==4?'c-active':''}}" data-num="3" bindtap="clickCodeItem">{{ defaultPlatNo[3] }}</view>
+		<view class="code-item c-num-item {{showActive==5?'c-active':''}}" data-num="4" bindtap="clickCodeItem">{{ defaultPlatNo[4] }}</view>
+		<view class="code-item c-num-item {{showActive==6?'c-active':''}}" data-num="5" bindtap="clickCodeItem">{{ defaultPlatNo[5] }}</view>
+		<view class="code-item c-num-item {{showActive==7?'c-active':''}}" data-num="6" bindtap="clickCodeItem">{{ defaultPlatNo[6] }}</view>
+		<view class="code-item c-num-item {{showActive==8?'c-active':''}}" data-num="7" bindtap="clickCodeItem">{{ defaultPlatNo[7] }}</view>
+	</view>
+	<view class="btn-area">
+		<button class="btn {{ allow?'btn-allow':'btn-noallow'}} margin-top-60" bindtap="queryParking">确认</button>
+	</view>
+	<view class="parking-description">
+		<text class="parking-description-line">未找到缴费信息原因：</text>
+		<text class="parking-description-line">1. 当前停车场不支持车牌付费</text>
+		<text class="parking-description-line">2. 请确认车牌号码输入正确</text>
+	</view>
+</view>
+<view hidden="{{keyboardShow}}" class="keyboard-list" id="simKeyBoard">
+	<view class="list-item clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.number}}">
+			<view class="p-item" bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="list-item list-two clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.letterone}}">
+			<view class="p-item" bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="list-item list-three clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.lettertwo}}">
+			<view class="p-item" bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="list-item list-four clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.letterthree}}">
+			<view class="p-item" bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+		<view class="delete" bindtap="deleteItemCode" hover hover-class="{{hoverClass}}">&#xe606;</view>
+	</view>
+</view>
+<view hidden="{{showProvince}}" class="keyboard-list" id="provinceList">
+	<view class="list-item clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.areaone}}">
+			<view class="p-item"  bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="list-item clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.areatwo}}">
+			<view class="p-item"  bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="list-item clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.areathree}}">
+			<view class="p-item"  bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+	</view>
+	<view class="list-item clearfix">
+		<view class="p-item-wrapper" wx:for="{{list.areafour}}">
+			<view class="p-item"  bindtap="chooseLetter" data-value="{{item}}">{{item}}</view>
+		</view>
+	</view>
+</view>

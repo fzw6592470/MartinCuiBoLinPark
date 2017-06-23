@@ -1,0 +1,10 @@
+<view class="code-list clearfix">
+	<view id="codePrefix" class="code-item c-active">粤</view>
+	<view id="letterPrefix" class="code-item c-num-item" data-num="0"></view>
+	<view class="code-item c-num-item" data-num="1"></view>
+	<view class="code-item c-num-item" data-num="2"></view>
+	<view class="code-item c-num-item" data-num="3"></view>
+	<view class="code-item c-num-item" data-num="4"></view>
+	<view class="code-item c-num-item" data-num="5"></view>
+	<view class="code-item c-num-item" data-num="6"></view>
+</view>

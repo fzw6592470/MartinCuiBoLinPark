@@ -1,0 +1,95 @@
+.header{
+	width:100%;
+	height: 206rpx;
+	background-color: #fff;
+	padding: 30rpx 36rpx;
+	box-sizing: border-box;
+}
+.head-img{
+	width: 146rpx;
+	height:146rpx;
+	border: 1rpx solid #f2f2f2;
+	/*border-radius: 50%;*/
+	float:left
+}
+
+.head-imgs{
+	width: 100%;
+	height:100%;
+}
+.head-title{
+	width: 50%;
+	height: 48rpx;
+	line-height: 48rpx;
+	margin-left:44rpx;
+	float:left;
+	font-weight: bold;
+}
+.head-mob{
+	margin-top: 24rpx;
+	font-size: 36rpx;
+	color:#333;
+}
+.head-bal{
+	font-size: 28rpx;
+	color:#666;
+}
+
+.account-menu{
+	width:100%;
+	height:auto;
+	border-top: 2rpx solid #e2e2e2;
+	border-bottom: 2rpx solid #e2e2e2;
+	margin-top: 36rpx;
+}
+
+.account-menu-item{
+	width:100%;
+	height: 96rpx;
+	line-height: 96rpx;
+	font-size: 32rpx;
+	color: #333;
+	background-color: #fff;
+	position: relative;
+	box-sizing: border-box;
+	background: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/right_icon.png) #fff no-repeat;
+	background-size: 12rpx 22rpx;
+	background-position: 97% center;
+}
+
+.account-menu-item-icon{
+	width: 92rpx;
+	height:96rpx;
+	float:left;
+}
+.icon-car{
+	background: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/veichet.png) center center no-repeat;
+	background-size: 39rpx;
+}
+.icon-bill{
+	background: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/bill.png) center center no-repeat;
+	background-size: 39rpx 33rpx;
+}
+.icon-record{
+	background: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/record.png) center center no-repeat;
+	background-size: 34rpx 41rpx;
+}
+.icon-psw{
+	background: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/secret.png) center center no-repeat;
+	background-size: 34rpx;
+}
+.account-menu-item-text{
+	float:left;
+	width: 87%;
+	height: 92rpx;
+	line-height: 92rpx;
+	border-bottom: 2rpx solid #e2e2e2;
+}
+.account-menu-item:last-child .account-menu-item-text{
+	border-bottom: 0 none;
+}
+.btn-area{
+	box-sizing: border-box;
+	padding-left: 32rpx;
+	padding-right: 32rpx;
+}

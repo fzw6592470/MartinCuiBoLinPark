@@ -1,0 +1,134 @@
+.parking-order{
+	width: 100%;
+	height: 373rpx;
+	background: #fff;
+	box-sizing: border-box;
+	padding-top: 46rpx;
+}
+.parking-title{
+	width:100%;
+	height: 62rpx;
+	line-height: 62rpx;
+	font-size: 34rpx;
+	color: #666;
+	text-align: center;
+	font-weight: bold;
+}
+.parking-fee{
+	width:100%;
+	height: 98rpx;
+	line-height: 98rpx;
+	padding-left: 32rpx;
+	padding-right: 32rpx;
+	box-sizing: border-box;
+	font-size:70rpx;
+	color:#333;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 45rpx;
+}
+.parking-line{
+	width: 100%;
+	height:2rpx;
+	line-height: 2rpx;
+	border-bottom: 2rpx dashed #e2e2e2;
+	margin-left: 32rpx;
+	margin-right: 32rpx;
+	box-sizing: border-box;
+}
+.parking-time,.parking-name{
+	width:100%;
+	height:44rpx;
+	line-height: 24rpx;
+	padding:10rpx 32rpx;
+	box-sizing: border-box;
+	font-size: 24rpx;
+	color: #666;	
+}
+.parking-time{
+	margin-top: 16rpx;
+}
+.parking-name{
+	margin-bottom: 16rpx;
+}
+
+.h2{
+	width:100%;
+	height:70rpx;
+	line-height: 70rpx;
+	margin-left: 32rpx;
+	margin-right: 32rpx;
+	box-sizing: border-box;
+	font-size: 24rpx;
+	color: #333;
+}
+.pay-type{
+	width: 100%;
+	height: 212rpx;
+	background-color: #fff;
+}
+
+.pay-item{
+	width: 100%;
+	height: 106rpx;
+}
+.pay-icon{
+	width: 110rpx;
+	height: 106rpx;
+	float:left;
+}
+.wechat-icon{
+	background: url(../../resource/images/wechat_icon.png) center center no-repeat;
+	background-size: 46rpx 42rpx;
+}
+.balance-icon{
+	background: url(../../resource/images/balance_icon.png) center center no-repeat;
+	background-size: 45rpx 45rpx;
+}
+.pay-text{
+	width: 85%;
+	height:106rpx;
+	float:right;
+	border-bottom: 2rpx solid #e2e2e2;
+	position: relative;
+}
+.pay-title{
+	width:100%;
+	height: 106rpx;
+	line-height: 106rpx;
+	font-size: 32rpx;
+	color:#333;
+	font-weight: bold;
+}
+
+.pay-default{
+	width: 32rpx;
+	height: 32rpx;
+	position: absolute;
+	right: 32rpx;
+	top: 37rpx;
+	z-index: 2;
+	border-radius: 50%;
+	border:2rpx solid #e2e2e2;
+	box-sizing: border-box;
+}
+.pay-active{
+	width: 32rpx;
+	height: 32rpx;
+	display:block;
+}
+.pay-descript{
+	display: none;
+}
+.no-pay{
+	height: 57rpx;
+	line-height: 72rpx;
+	color: #ddd;
+	font-size: 32rpx;
+}
+.no-pay-descript{
+	height: 49rpx;
+	line-height: 44rpx;
+	color: #ddd;
+	font-size: 24rpx;
+}

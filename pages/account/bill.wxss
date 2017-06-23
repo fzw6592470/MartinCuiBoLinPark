@@ -1,0 +1,75 @@
+.no-bill{
+	width:100%;
+	height: auto;
+}
+.no-bill-img{
+	width: 195rpx;
+	height:195rpx;
+	margin: 328rpx auto 0;
+	display:block;
+}
+
+.no-bill-title{
+	width: 100%;
+	height: 84rpx;
+	line-height: 84rpx;
+	margin-top: 66rpx;
+	text-align:center;
+	font-size: 32rpx;
+	color: #333;
+	font-weight: bold;
+}
+.bill-list{
+	width: 100%;
+	height: 100%;
+}
+.bill-day{
+	width: 100%;
+	height: 60rpx;
+	line-height: 60rpx;
+	padding-left: 32rpx;
+	box-sizing: border-box;
+	font-size:24rpx;
+	color:#333;
+	border-bottom: 2rpx solid #e2e2e2;
+}
+
+.bill-item{
+	width: 100%;
+	height: 150rpx;
+	border-bottom: 2rpx solid #e2e2e2;
+	box-sizing: border-box;
+	padding: 16rpx 32rpx 18rpx;
+	background: #fff;
+}
+.bill-title{
+	width: 50%;
+	height: 60rpx;
+	line-height: 60rpx;
+	color: #333;
+	font-size: 32rpx;
+	float:left;
+	font-weight: bold;
+}
+.bill-time{
+	width: 50%;
+	height: 56rpx;
+	line-height: 56rpx;
+	color: #888;
+	font-size: 28rpx;
+	float:left;
+}
+
+.bill-fee{
+	width:50%;
+	height: 116rpx;
+	line-height: 116rpx;
+	color: #56bd64;
+	font-size:32rpx;
+	float:right;
+	text-align:right;
+}
+.color_red{
+	color: #fb3c3c;
+}
+

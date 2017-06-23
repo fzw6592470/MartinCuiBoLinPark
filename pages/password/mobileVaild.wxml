@@ -1,0 +1,14 @@
+<view class="section" id="cui-mobile-vaild">
+	
+	<view class="mobile-title"> 已发送验证码至 ： {{mobNo}}</view>
+	
+	<view class="varify-code-box">
+		<input class="general-input varify-code-input" type="tel" bindchange="inputVarifyCode" value="{{varifyCode}}" placeholder="请输入6位短信验证码" maxlength="6" />
+		<button class="btn {{allow?'btn-allow':'btn-noallow'}} varify-code-btn" bindtap="sendVarifyCode" disabled="{{!allow}}">{{btnText}}</button>
+	</view>
+	
+	<view class="btn-area">
+		<button class="btn {{btnAllow?'btn-allow':'btn-noallow'}} margin-top-60"  disabled="{{!btnAllow}}" bindtap="nextStep">{{ nextStepText }}</button>
+	</view>
+	
+</view>

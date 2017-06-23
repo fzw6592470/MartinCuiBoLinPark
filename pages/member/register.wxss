@@ -1,0 +1,60 @@
+#cui-login{
+	background: #fff;
+	position: relative;
+}
+.register-form{
+	width: 100%;
+	height: 540rpx;
+	margin-top: 60rpx;
+	padding-left: 60rpx;
+	padding-right: 60rpx;
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+}
+.login-input{
+	border-bottom: 2rpx solid #e2e2e2;	
+}
+.forget-pwd{
+	width:100%;
+	height:100rpx;
+	line-height: 100rpx;
+	font-size: 28rpx;
+	color: #b0cbff;
+	text-align: center;
+	font-weight: bold;
+}
+.cui-varify-code{
+	width: 173rpx;
+	height: 62rpx;
+	line-height: 62rpx;
+	position: absolute;
+	right: 60rpx;
+	top: 306rpx;
+	z-index: 2;
+	text-align: center;
+	font-size: 28rpx;
+	color: #fff;
+}
+.register-btn{
+	width: 100%;
+	height: 96rpx;
+	line-height: 96rpx;
+	border-top: 2rpx solid #e2e2e2;
+	text-align: center;
+	font-size: 28rpx;
+	color: #56bd64;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-weight: bold;
+}
+.register-icon{
+	width: 28rpx;
+	height: 28rpx;
+	display: inline-block;
+	margin-right: 20rpx;
+	background-image: url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/turn_left.png);
+	background-size: 28rpx;
+	vertical-align: middle;
+}

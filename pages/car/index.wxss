@@ -1,0 +1,48 @@
+.no-car{
+	width: 100%;
+	height: auto;
+}
+.no-car-image{
+	width:100%;
+	height: 482rpx;
+}
+.no-car-title{
+	width:100%;
+	height:auto;
+	box-sizing: border-box;
+	line-height: 34rpx;
+	font-size: 24rpx;
+	color: #666;
+	text-align: center;
+	padding-left: 62rpx;
+	padding-right: 62rpx;
+}
+.btn-area{
+	width:100%;
+	height:auto;
+	box-sizing: border-box;
+	padding-left: 32rpx;
+	padding-right: 32rpx;
+}
+.car-item{
+	width:100%;
+	height: 96rpx;
+	line-height: 96rpx;
+	box-sizing: border-box;
+	padding-left: 92rpx;
+	background: #fff url(http://m.jinyipark.com/phoenix/bundles/migbusinessbolinpark/images/car_icon.png) 29rpx center no-repeat;
+	background-size: 34rpx;
+	border-bottom: 2rpx solid #e2e2e2;
+}
+.car-btn{
+	float:right;
+	margin-right: 32rpx;
+	text-align: center;
+	width: 160rpx;
+	height: 48rpx;
+	margin-top: 16rpx;
+	color: #666;
+	font-size: 24rpx;
+	line-height:48rpx;
+	border: 2rpx solid #56bd64;
+}
